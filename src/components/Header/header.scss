@@ -1,0 +1,115 @@
+@import '../../globalscss/global.scss';
+
+header {
+  @include flex(row, space-between, center, 0px);
+  height: 90px;
+  padding: 10px 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: transparent;
+
+  @include responsive(900px) {
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff; 
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  }
+
+  .mobile_nav {
+    display: none;
+    border-radius: 20px;
+    padding:25px 0px;
+    margin: 10px;
+    box-shadow:10px 10px 20px #50504f;
+    @include responsive(900px) {
+      display: flex; 
+      justify-content: space-around;
+      align-items: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background-color: #ffffff;
+      z-index: 1000;
+      box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1); 
+    }
+
+    .nav_link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+      gap: 5px; 
+
+      .icon {
+        font-size: 1.5rem; 
+        @include responsive(500px){
+          font-size: 1.2rem;
+        }
+      }
+      
+
+      &.active {
+        color: rgb(8, 33, 123);
+        font-weight: 600;
+      }
+      .title{
+        font-size: 0.8rem;
+        @include responsive(500px){
+          font-size: 0.5rem;
+        }
+      }
+      &.active {
+        color: rgb(8, 33, 123);
+        font-weight: 600;
+      }
+    }
+  }
+
+  .logo {
+    img {
+      width: 60%;
+      height: 80px;
+      object-fit: contain;
+    }
+  }
+
+  nav {
+    @include flex(row, center, center, 50px);
+
+    .active {
+      color: rgb(8, 33, 123);
+      font-weight: 600;
+    }
+
+    @include responsive(900px) {
+      display: none; 
+    }
+  }
+
+  .button-link {
+    background-color: #adaaaf;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #504c4c;
+    }
+  }
+}

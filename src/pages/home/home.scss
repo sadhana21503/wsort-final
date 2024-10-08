@@ -1,0 +1,373 @@
+@import '../../globalscss/global.scss';
+.home {
+  background: url('../../assets/images/home.jpg') center/cover no-repeat;
+  position: relative;
+  padding: 80px 50px 400px;
+  @include flex(column, null, null, 50px);
+  overflow: hidden;
+  @include responsive(650px) {
+    padding: 80px 20px 400px;
+  }
+  .home_section1 {
+    height: 100vh;
+    position: relative;
+    overflow: visible;
+
+    @include responsive(400px) {
+      height: auto;
+      margin-top: 150px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .top {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      @include flex(row, null, null, 0px);
+
+      .top_left {
+        flex: 1;
+        @include responsive(1000px) {
+          background-position: -50px 0px;
+        }
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .top_right {
+        flex: 1;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .bottom {
+      @include flex(row, center, center, 20px);
+
+      background: transparent;
+      height: 100%;
+      text-align: center;
+      @include flex(column, center, center, 20px);
+      h1 {
+        font-size: 4rem;
+        @include responsive(767px) {
+          font-size: 3rem;
+        }
+        @include responsive(500px) {
+          font-size: 2.5rem;
+        }
+        @include responsive(350px) {
+          font-size: 2.2rem;
+        }
+        @include responsive(300px) {
+          font-size: 1.8rem;
+        }
+      }
+      p {
+        margin-top: 1%;
+        font-size: 1.4rem;
+        line-height: 35px;
+        width: 70%;
+        text-align: center;
+        @include responsive(500px) {
+          font-size: 1.1rem;
+          width: 98%;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .home_section2 {
+		width: 100% !important;
+		padding: 0px !important;
+    background: linear-gradient(to bottom, #dadcdd, #c3c5c8);
+    h1{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
+      font-weight: 800;
+      @include responsive(500px){
+        font-size: 36px;
+        text-align: center;
+        padding: 5px;
+      }
+    }
+		.section2_subsection {
+			padding-top: 90px;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+      @include responsive(500px){
+        grid-template-columns: repeat(1,1fr);
+      }
+			.service_items {
+				text-align: center;
+				.top_top {
+					height: 100%;
+					width: 100%;
+					img {
+						height: 400px;
+						width: 80%;
+						object-fit: cover;
+						filter: brightness(80%);
+						border-radius: 30px;
+						&:hover {
+							scale: 1.08;
+						}
+            
+           
+            @include responsive(1200px){
+              height: 350px;
+            }
+             @include responsive(800px){
+              height: 330px;
+              width: 90%;
+            }
+            @include responsive(600px){
+              height: 250px;
+            }
+            @include responsive(500px){
+              height: 350px;
+              width: 90%;
+            }
+            @include responsive(350px){
+              height: 300px;
+              
+            }
+					}
+				}
+				.top_bottom {
+					h1 {
+						font-size: 2.5rem;
+						font-weight: 800;
+						color: #f9f0cb;
+            margin-top: 5%;
+						transform: translateY(-280px);
+            @include responsive(1200px){
+              font-size: 2.2rem;
+              transform: translateY(-250px);
+            }
+            @include responsive(800px){
+              font-size: 2rem;
+              transform: translateY(-230px);
+            }
+            @include responsive(600px){
+              font-size: 1.7rem;
+              transform: translateY(-190px);
+            }
+             @include responsive( 500px){
+              font-size: 1.5rem;
+              transform: translateY(-200px);
+            }
+					}
+				}
+			}
+		}
+	}
+  .home_section3 {
+    margin: 100px 0px 50px;
+    height: 100vh;
+
+    overflow: hidden;
+    @include flex(row, center, center, 20px);
+    @include responsive(1000px) {
+      @include flex(column-reverse, center, center, 80px);
+      height: auto;
+    }
+
+    @include responsive(650px) {
+      @include flex(column, center, center, 40px);
+    }
+    @include responsive(300px) {
+      gap: 20px;
+    }
+    .left {
+      flex: 2;
+      overflow: hidden;
+      transition: all ease 1s;
+
+      &:hover {
+        cursor: pointer;
+        scale: (1.03);
+      }
+      @include responsive(300px) {
+        flex: 3;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        box-shadow: 5px -5px 10px 0px rgb(120 112 109);
+        @include responsive(300px) {
+          height: 300px;
+          object-fit: cover;
+        }
+      }
+    }
+    .right {
+      overflow: hidden;
+      flex: 1;
+
+      text-align: center;
+      @include flex(column, null, null, 30px);
+      @include responsive(650px) {
+        gap: 10px;
+        padding: 5px;
+      }
+
+      h1 {
+        font-size: 4rem;
+        @include responsive(650px) {
+          font-size: 2.5rem;
+        }
+        @include responsive(300px) {
+          font-size: 1.6rem;
+        }
+      }
+      p {
+        font-size: 1.5rem;
+        line-height: 32px;
+        @include responsive(650px) {
+          font-size: 1.2rem;
+        }
+        @include responsive(300px) {
+          font-size: 1rem;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  .home_section4 {
+    padding: 30px;
+    @include flex(column, null, center, 100px);
+    @include responsive(1269px) {
+      margin-bottom: 210px;
+    }
+    @include responsive(870px) {
+      gap: 50px;
+      padding: 15px;
+    }
+    @include responsive(770px) {
+      margin-bottom: 500px;
+    }
+    @include responsive(450px) {
+      margin-bottom: 600px;
+    }
+    @include responsive(310px) {
+      margin-bottom: 1000px;
+    }
+    @include responsive(230px) {
+      padding: 0px;
+      margin-bottom: 800px;
+    }
+    @include responsive(270px) {
+      padding: 0px;
+      margin-bottom: 1000px;
+    }
+    h1 {
+      font-size: 3rem;
+      text-transform: capitalize;
+      @include responsive(390px) {
+        font-size: 2rem;
+      }
+    }
+    .bottom {
+      @include flex(row, center, null, 80px);
+      flex-wrap: wrap;
+      overflow: hidden;
+
+      flex: 1;
+      @include responsive(870px) {
+        width: 100% !important;
+        padding: 0px 10px;
+      }
+      @include responsive(390px) {
+        gap: 40px;
+      }
+      @include responsive(230px) {
+        padding: 0px;
+      }
+      .item_container {
+        flex-basis: 40%;
+        padding: 20px;
+        box-shadow: 15px -7px 14px -9px #cf9e77;
+        text-align: center;
+
+        background-image: linear-gradient(
+          146deg,
+          rgba(250, 238, 212, 1) 7%,
+          rgb(240, 209, 181) 77%
+        );
+        @include responsive(1131px) {
+          flex-basis: 35%;
+        }
+        @include responsive(870px) {
+          flex-basis: 100%;
+          padding: 5px;
+        }
+        @include responsive(230px) {
+          padding: 0px;
+        }
+        .item {
+          padding: 20px;
+          text-align: center;
+
+          @include flex(row, null, center, 20px);
+          backdrop-filter: blur(1px);
+          background-color: rgba(255, 255, 255, 0.26);
+          @include responsive(1131px) {
+            @include flex(column, null, center, 20px);
+            gap: 10px;
+          }
+          @include responsive(390px) {
+            padding: 5px;
+          }
+
+          .left {
+            padding: 20px;
+            border-radius: 50%;
+            background: linear-gradient(to right, #d1913c, #ffd194);
+
+            @include flex(row, center, center, 0px);
+            .icon {
+              font-size: 4rem;
+              fill-opacity: 0.3;
+              background-clip: text;
+              @include responsive(390px) {
+                font-size: 2.5rem;
+              }
+            }
+          }
+          .right {
+            @include flex(column, null, null, 10px);
+            @include responsive(1131px) {
+              text-align: center;
+            }
+            h2 {
+              font-size: 1.5rem;
+              background: linear-gradient(to right, #d1913c, #ffd194);
+              background-clip: text;
+              color: transparent;
+              text-align: center;
+
+              @include responsive(420px) {
+                font-size: 1.2rem;
+              }
+            }
+            p {
+              font-size: 1.1rem;
+              text-align: center;
+              @include responsive(420px) {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
